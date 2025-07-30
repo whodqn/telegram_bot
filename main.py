@@ -1,17 +1,17 @@
 from aiogram import Bot, Dispatcher, types, executor
 
-API_TOKEN = '7420711472:AAFiEtyLb6QNDYXGomrZpJGQIV8DMCmPuG4'
+API_TOKEN = 'Your bot token'
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['start'])
 async def send_welcome(message: types.Message):
-   await message.reply("Привет!\nЯ ботинок(bot) от Никитосика!\nОтправь мне любое сообщение, а я тебе обязательно отвечу.")
+   await message.reply("Message")
 
 @dp.message_handler(commands=['info'])
 async def send_welcome(message: types.Message):
-   await message.reply("Никита с Перми, прям щас, прям тут!")
+   await message.reply("Message")
 
 @dp.message_handler()
 async def echo(message: types.Message):
